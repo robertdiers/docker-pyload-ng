@@ -4,7 +4,8 @@ FROM debian:latest
 RUN apt update
 RUN apt upgrade
 RUN apt install -y python3-pip
-RUN pip install --pre pyload-ng[all]
+RUN pip install filetype python-magic
+RUN pip install pyload-ng[all]
 
 # set workdir
 RUN mkdir /app
